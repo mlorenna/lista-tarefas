@@ -1,0 +1,14 @@
+{
+    "/accounts": {
+    "target": "https://app.fluigidentity.com",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
+    },
+    "/tasks/api/v2": {
+        "target" : "http://tasks-prod.k8s-platform-prod-us-east-1.fluig.io",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    }
+}

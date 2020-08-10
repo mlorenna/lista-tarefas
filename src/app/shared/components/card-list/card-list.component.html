@@ -1,0 +1,30 @@
+<div class="card-container">
+    <ng-container *ngIf="list">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <span class="card-label">{{list.name}}</span>
+                <br>
+                <ng-container *ngIf="task">
+                    <div class="card-content">
+                        <app-card-task [task]="task"></app-card-task>
+                    </div>
+                </ng-container>
+                <button type="button" class="btn btn-link card-button">
+                    <i class="lni lni-plus"></i>
+                    Adicionar mais uma tarefa
+                </button>
+            </div>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="!list">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <button type="button" class="btn btn-link card-button" (click)="openModal()">
+                    <i class="lni lni-plus"></i>
+                    Adicionar mais uma lista
+                </button>
+            </div>
+        </div>
+    </ng-container>
+
+</div>

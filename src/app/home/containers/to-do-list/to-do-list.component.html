@@ -1,0 +1,32 @@
+<ng-container *ngIf="!isEmpty">
+    <div class="container-fluid">
+        <div class="row">
+            <ng-template ngFor let-list [ngForOf]="lists.items">
+                <div class="col-md-3 col-lg-2">
+                    <app-card-list [list]="parseList(list)"></app-card-list>
+                </div>
+            </ng-template>
+            <div class="col-md-3 col-lg-2">
+                <button type="button" class="btn btn-link card-button" (click)="openModal()">
+                    <i class="lni lni-plus"></i>
+                    Adicione mais uma lista clicando aqui
+                </button>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+
+<ng-container *ngIf="isEmpty">
+    <div class="container-fluid not-found-container">
+        <div class="row not-found-row">
+            <div class="col-md-12">
+                <app-not-found></app-not-found>
+                <button type="button" class="btn btn-link card-button" (click)="openModal()">
+                    <i class="lni lni-plus"></i>
+                    Adicione uma lista clicando aqui
+                </button>
+            </div>
+        </div>
+    </div>
+</ng-container>

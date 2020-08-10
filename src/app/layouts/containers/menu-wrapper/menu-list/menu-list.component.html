@@ -1,0 +1,5 @@
+<ng-template ngFor let-menu [ngForOf]="menu">
+        <ng-container *ngIf="!menu.submenu">
+            <app-menu-button [menu]="menu"></app-menu-button>
+        </ng-container>
+</ng-template>

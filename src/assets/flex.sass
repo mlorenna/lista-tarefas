@@ -1,0 +1,24 @@
+@function flex-do-check($variable)
+    @if $variable == start
+        @return flex-start
+    @else if $variable == end
+        @return flex-end
+    @else 
+        @return $variable
+
+@mixin flex($justify: start, $align: start, $direction: row, $wrap: nowrap)
+    box-sizing: border-box
+    display: flex
+    flex-direction: $direction
+    justify-content: flex-do-check($justify)
+    align-items: flex-do-check($align)
+    flex-wrap: $wrap
+
+    @if $direction == row 
+        @if $justify != space-between and $justify != space-around and $justify != space-evenly 
+            text-align: $justify
+        
+    @else
+        @if $align != space-between and $align != space-around and $align != space-evenly 
+            text-align: $align
+        

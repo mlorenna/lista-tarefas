@@ -1,0 +1,6 @@
+<div routerLinkActive="active">
+    <button class="btn btn-link menu-button" [routerLink]="menu.path" type="button" [disabled]="menu.disabled? 'disabled' : null">
+        <i [class]="menu.icon"></i>
+        {{menu.label}}
+    </button>
+</div>

@@ -1,0 +1,17 @@
+<header class="header">
+    <app-header (menuTrigger)="openMenu()"></app-header>
+</header>
+<ng-container *ngIf="controller !== 'closed'">
+    <div [ngClass]="['panel', controller]" (click)="closeMenu()">
+        <nav class="nav">
+            <div class="wrapper">
+                <app-menu-wrapper></app-menu-wrapper>
+            </div>
+        </nav>
+    </div>
+</ng-container>
+<ng-container>
+    <main>
+        <router-outlet> </router-outlet>
+    </main>
+</ng-container>

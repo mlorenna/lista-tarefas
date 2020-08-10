@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+@import ./assets/colors
+@import ./assets/keyframes
+@import ./assets/flex
+.auth-text 
+    color: $violet
+    animation: change-color 1s infinite
+body
+    background-color: #FCF9ED
+    color: #707070
+
+.card-container, .card-content, .card-content-task
+    border-radius: 5px
+    border: 1px solid #D6D6D6
+    background-color: $gray
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.16),0px 1px 1px 0px rgba(0, 0, 0, 0.16),0px 1px 3px 0px rgba(0, 0, 0, 0.16)
+.card-content
+    margin: 5px
+    
+.card-label
+    font-size: 18px
+    font-weight: bold
+    margin: 5px
+
+.card-button, .card-label-task
+    font-size: 14px
+    font-weight: lighter
+    color: #707070
+
+.card-label-task
+     font-size: 18px
+.card-content-task
+    margin: 5px 0px
+.card-description-task, .card-progress-task
+    font-size: 14px
+.modal-add-list
+    width: 100vw
+.not-found-container, .not-found-row
+    height: 100vh
+
+.not-found-row
+    @include flex(center, center)

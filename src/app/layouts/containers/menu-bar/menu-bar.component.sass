@@ -1,0 +1,64 @@
+$navindex: 231901
+$navsize: 400px
+$navdelay: 400ms
+$navanimation: ease all $navdelay
+
+.panel 
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    z-index: $navindex
+    cursor: pointer
+
+    &, & > * 
+        position: fixed
+        transition: $navanimation
+
+    .nav
+        z-index: $navindex + 1
+        background: #FCF9ED
+        width: $navsize
+        height: 100%
+        cursor: default
+
+    &.leaving
+        background: rgba(0,0,0,0)
+        .nav
+            left: #{-$navsize}
+
+
+    &.opening
+        background: rgba(0,0,0,0)
+        animation: bgopening $navdelay ease-out 1 forwards
+
+        @at-root
+            @keyframes bgopening
+                from
+                    background: rgba(0,0,0,0)
+        
+                to
+                    background: rgba(0,0,0,0.6)
+        
+    
+
+
+        .nav
+            left: #{-$navsize}
+            animation: navopening $navdelay ease 1 forwards
+            @at-root
+                @keyframes navopening 
+                    from 
+                        left: #{-$navsize}
+                    to 
+                        left: 0
+        
+    
+
+
+    &.open
+        background: rgba(0,0,0,0.6)
+        .nav
+            left: 0
+.wrapper
+    width: 100%

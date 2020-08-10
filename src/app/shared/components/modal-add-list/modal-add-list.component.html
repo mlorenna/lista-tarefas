@@ -1,0 +1,20 @@
+<div class="row justify-content-end header">
+  <div class="col-1">
+    <button class="btn btn-link menu-button" type="button" (click)="bsModalRef.hide()"> <i class="lni lni-close"></i> </button>
+  </div>
+</div>
+<form [formGroup]="formAddList" (ngSubmit)="onSubmit(formAddList.value, $event)">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Titulo</label>
+      <input type="text" class="form-control" formControlName="name" placeholder="Lista">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Descrição</label>
+      <textarea class="form-control" formControlName="description" rows="3" placeholder="Adicionar uma descrição sobre a lista..."></textarea>
+    </div>
+    <div class="row justify-content-end">
+      <div class="col-md-2 col-sm-1">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+  </form>

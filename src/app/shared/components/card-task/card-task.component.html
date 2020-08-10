@@ -1,0 +1,21 @@
+<ng-container *ngIf="!isEmpty">
+    <div class="card-container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container">
+                    <div class="row card-content-task">
+                        <div class="col-md-12  text-left">
+                            <p class="card-label-task">{{task.name}}</p>
+                            <span class="card-description-task">{{task.description}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+
+<ng-container *ngIf="isEmpty">
+    <app-not-found></app-not-found>
+</ng-container>
