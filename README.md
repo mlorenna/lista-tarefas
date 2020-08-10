@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-You will need to install angular 10
+You will need to install Angular 10
 Run `npm install -g @angular/cli`
 
 ### Installing
@@ -20,9 +20,14 @@ Run `ng serve` for a server. Navigate to `http://localhost:4200`
 
 ## Built With
 
-Angular 10
+[Angular 10][angular]
+[ngx-bootstrao][bootstrap]
+[Moment][moment]
 
 ## Authors
 
 * **Lorenna Martins** - *Initial work* - (https://github.com/mlorenna)
 
+[angular]: https://angular.io/
+[moment]: https://momentjs.com/
+[bootstrap]:https://valor-software.com/ngx-bootstrap/#/
