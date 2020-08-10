@@ -22,7 +22,7 @@ Run `ng serve` for a server. Navigate to `http://localhost:4200`
 
 [Angular 10][angular]
 <br/>
-[ngx-bootstrao][bootstrap]
+[ngx-bootstrap][bootstrap]
 <br/>
 [Moment][moment]
 
